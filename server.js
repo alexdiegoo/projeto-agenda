@@ -45,11 +45,12 @@ app.use(flash());
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
-const { checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
+const { checkCsrfError, csrfMiddleware, middlewareGlobal } = require('./src/middlewares/middleware');
 
 app.use(csrf());
 app.use(checkCsrfError);
 app.use(csrfMiddleware);
+app.use(middlewareGlobal);
 app.use(routes);
 
 app.on('connect', () => {
