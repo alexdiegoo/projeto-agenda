@@ -1,9 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-    <%- include('includes/head') %>
-<body>
-    <h1>Ola mundo</h1>
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
 
-    <script src="./assets/js/bundle.js"></script>
-</body>
-</html>
+            <div class="col-lg-8 my-3">
+                <h1 class="text-center">Agenda</h1>
+                <p class="text-center leade">Seus contatos estão abaixo</p>
+
+                <div class="row">
+                    <div class="col my-3">
+                        <div class="alert alert-danger">Um erro qualuqer</div>
+                    </div>
+                </div>
+
+                <div class="responsive-table">
+                    <table class="table my-3">
+                        <tr>
+                            <td>Luiz </td>
+                            <td>Otavio</td>
+                            <td>otaviomirando@gmail.com</td>
+                            <td>99999999</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+<%- include('includes/footer') %>
+    
