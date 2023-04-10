@@ -51,6 +51,11 @@ class Contato {
         return contato;
     }
 
+    static async buscaContatos() {
+        const contatos = await ContatoModel.find().sort({ criadoEm: -1 });
+        return contatos;
+    }
+
     async register() {
         this.valida();
 
