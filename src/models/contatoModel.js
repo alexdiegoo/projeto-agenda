@@ -54,6 +54,12 @@ class Contato {
     static async buscaContatos() {
         const contatos = await ContatoModel.find().sort({ criadoEm: -1 });
         return contatos;
+    } 
+
+    static async delete(id) {
+        if(typeof id != 'string') return;
+        const contato = await ContatoModel.findOneAndDelete(id);
+        return contato;
     }
 
     async register() {
